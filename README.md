@@ -12,7 +12,7 @@ Requirements: Python 3.9.7, pandas 1.3.4, numpy 1.20.3, sklearn 0.24.2, scipy 1.
 
 Step 1.: File list.
 
-       -- Create a "file_list.csv" containing the methylation level files (e.g. bed format) of testing data 
+       -- Create a "file_list.csv" containing the methylation level files (e.g. bed format) of testing data (e.g. ls Data > file_list.csv)
               In this directory, you can see an example file for an available human embryo dataset (GSE49828)
 
        -- Testing data files should be in the folder "Data"
@@ -31,7 +31,8 @@ Step 2.: Format methylation level files
 
 Step 3.: Liftover from h19 to hg38 (if it needed), and shift genomic coordinates with 1 (if it needed)
        
-       -- You have to shift the coordinates if the methylation level files use 0-based genomic coordinates.
+       -- You have to shift the coordinates if the methylation level files use 0-based genomic coordinates 
+              (I recommend to check some coordinates in the UCSC Genome Browser)
        
        $ python MultiLiftOver.py
 
